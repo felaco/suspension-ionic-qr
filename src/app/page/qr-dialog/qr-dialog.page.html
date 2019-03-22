@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start" (click)="onBackButton()">
+            <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>qrDialog</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content id="qr-scanner-content">
+    <div *ngIf="hasQr">
+        <p>{{ qrText }}</p>
+    </div>
+
+</ion-content>
+
+<div *ngIf="scanning" class="page-scan">
+    <div class="guides">
+        <!-- Si me robe el svg de bitpay... -->
+        <img class="svg qr-scan-guides" src="/assets/img/bitpay-wallet-qr-scan-guides.svg">
+    </div>
+</div>
+

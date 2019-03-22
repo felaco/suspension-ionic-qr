@@ -1,0 +1,7 @@
+{
+  "name": "ion-qr",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

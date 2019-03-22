@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>qrPage</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div>
+        {{ qrResultProvider.qrResult }}
+    </div>
+    <ion-button (click)="onScan()">Escanear</ion-button>
+</ion-content>
