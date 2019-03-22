@@ -36,9 +36,9 @@
   --ion-color-success-tint: #28e070;
 
   /** warning **/
-  --ion-color-warning: #ffce00;
+  --ion-color-warning: #ffec54;
   --ion-color-warning-rgb: 255, 206, 0;
-  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast: #333;
   --ion-color-warning-contrast-rgb: 255, 255, 255;
   --ion-color-warning-shade: #e0b500;
   --ion-color-warning-tint: #ffd31a;
@@ -101,4 +101,19 @@ app-qr-dialog {
   .noneDisplay{
     display: none;
   }
+}
+
+.collapse.show{
+  display: block;
+}
+
+.collapse:not(.show) {
+  display: none
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height .35s ease
 }

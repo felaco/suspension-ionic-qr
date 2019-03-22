@@ -10,11 +10,16 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {QRScanner} from '@ionic-native/qr-scanner/ngx';
 import {QrResultService} from './providers/qr-result.service';
+import {ComponentsModule} from "./components/components.module";
 
 @NgModule({
     declarations: [AppComponent],
     entryComponents: [],
-    imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+    imports: [BrowserModule,
+        IonicModule.forRoot(),
+        AppRoutingModule,
+        ComponentsModule
+    ],
     providers: [
         StatusBar,
         SplashScreen,
