@@ -9,6 +9,7 @@ export class ExpandableComponent implements OnInit {
     @Input() background = 'primary';
     @Input() fontColor = '#DDD';
     @ViewChild('content') content: ElementRef;
+    @Input() buttonClass = '';
 
     @Input() expanded = true;
     @Input() header = 'Expandir';
@@ -16,19 +17,20 @@ export class ExpandableComponent implements OnInit {
     constructor() {
     }
 
-    ngAfterViewInit(){
-    }
-
-    private onExpand(){
-        if (!this.content.nativeElement.style.maxHeight){
+    ngOnInit(): void {
+        // aparentemente viewchild no se ejecuta aun en este punto.
+        // asi que lo tiro a un timeout como hack
+        setTimeout(() =>{
             if (this.expanded){
-                console.log('expanded');
                 this.content.nativeElement.style.maxHeight = this.content.nativeElement.scrollHeight + 'px';
             } else {
                 this.content.nativeElement.style.maxHeight = '0';
             }
-        }
+        }, 50);
+    }
 
+
+    private onExpand(){
 
         this.expanded = !this.expanded;
         if (this.expanded){
@@ -36,7 +38,6 @@ export class ExpandableComponent implements OnInit {
         } else {
             this.content.nativeElement.style.maxHeight = '0';
         }
-        console.log(this.content.nativeElement.maxHeight);
     }
 
 }

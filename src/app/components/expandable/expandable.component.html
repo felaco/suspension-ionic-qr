@@ -1,4 +1,9 @@
-<ion-button [color]="background" [style.color]="fontColor" expand="full" (click)="onExpand()">
+<ion-button [color]="background"
+            [style.color]="fontColor"
+            expand="full"
+            [ngClass]="buttonClass"
+            (click)="onExpand()"
+>
     {{ header }}
 </ion-button>
 <div class="content" #content>
