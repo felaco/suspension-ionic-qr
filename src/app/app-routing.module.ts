@@ -7,6 +7,7 @@ const routes: Routes = [
     {path: 'qr-dialog', loadChildren: './page/qr-dialog/qr-dialog.module#QrDialogPageModule'},
     {path: 'qr-page', loadChildren: './page/qr-page/qr-page.module#QrPagePageModule'},
   { path: 'removal', loadChildren: './page/removal/removal.module#RemovalPageModule' },
+  { path: 'installation', loadChildren: './page/installation/installation.module#InstallationPageModule' },
 ];
 
 @NgModule({
