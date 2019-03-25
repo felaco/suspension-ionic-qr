@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { QrPagePage } from './qr-page.page';
+import { ActionsPagePage } from './actions-page.page';
 
-describe('QrPagePage', () => {
-  let component: QrPagePage;
-  let fixture: ComponentFixture<QrPagePage>;
+describe('ActionsPagePage', () => {
+  let component: ActionsPagePage;
+  let fixture: ComponentFixture<ActionsPagePage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QrPagePage ],
+      declarations: [ ActionsPagePage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(QrPagePage);
+    fixture = TestBed.createComponent(ActionsPagePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

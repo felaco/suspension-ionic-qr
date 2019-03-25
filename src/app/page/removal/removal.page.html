@@ -3,13 +3,15 @@
         <ion-buttons slot="start">
             <ion-back-button defaultHref="/home"></ion-back-button>
         </ion-buttons>
-        <ion-title>removal</ion-title>
+        <ion-title>Removal</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
     <h1>Rear Suspension Removal</h1>
     <div>
+
+        <ion-img src="/assets/img/foto-camion-suspension.jpg"></ion-img>
 
         <app-expandable header="Procedimientos de seguridad" [expanded]="false">
             <p style="font-weight: bold">
@@ -37,20 +39,8 @@
 
         <app-expandable header="Materiales y herramientas requeridas" [expanded]="false">
             <ion-list>
-                <ion-item>
-                    <ion-label>Pin Puller</ion-label>
-                </ion-item>
-                <ion-item>
-                    <ion-label>Lifting device and support for the haul truck chassis</ion-label>
-                </ion-item>
-                <ion-item>
-                    <ion-label>Lifting device forthe rear suspensions</ion-label>
-                </ion-item>
-                <ion-item>
-                    <ion-label>Applicable shipping pallet for the suspension being removed</ion-label>
-                </ion-item>
-                <ion-item>
-                    <ion-label>Band-strap</ion-label>
+                <ion-item *ngFor="let tool of tools; let i = index" [routerLink]="['/material-detail/', i]">
+                    <ion-label>{{ tool.name }}</ion-label>
                 </ion-item>
             </ion-list>
         </app-expandable>

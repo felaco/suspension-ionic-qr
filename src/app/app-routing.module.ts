@@ -5,8 +5,14 @@ const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', loadChildren: './home/home.module#HomePageModule'},
     {path: 'qr-dialog', loadChildren: './page/qr-dialog/qr-dialog.module#QrDialogPageModule'},
-    {path: 'qr-page', loadChildren: './page/qr-page/qr-page.module#QrPagePageModule'},
-  { path: 'removal', loadChildren: './page/removal/removal.module#RemovalPageModule' },
+    {path: 'removal', loadChildren: './page/removal/removal.module#RemovalPageModule'},
+    {
+        path: 'material-detail/:index',
+        loadChildren: './page/material-detail/material-detail.module#MaterialDetailPageModule'
+    },
+    {path: 'index-list', loadChildren: './page/index-list/index-list.module#IndexListPageModule'},
+    {path: 'actions-page', loadChildren: './page/actions-page/actions-page.module#ActionsPagePageModule'},
+    {path: 'actions-page-redirect', redirectTo:'actions-page'}
 ];
 
 @NgModule({
