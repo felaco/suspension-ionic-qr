@@ -1,0 +1,282 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>setup</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <h1>Rear Suspension Setup</h1>
+    <div>
+        <ion-img src="/assets/img/foto-camion-suspension.jpg"></ion-img>
+        <app-expandable header="Security Procedures" [expanded]="false">
+            <p style="font-weight: bold">
+                LME-SWP-00025 - page 1369
+            </p>
+            <ion-card>
+                <ion-card-header color="secondary">NOTICE</ion-card-header>
+                <ion-card-content>
+                    The minimum weight of each filled rear suspension is 895kg. Use an
+                    approved lift device that can safely lift and support the component weight
+                </ion-card-content>
+            </ion-card>
+            <ion-card>
+                <ion-card-header color="warning">WARNING</ion-card-header>
+                <ion-card-content>
+                    Failure to complete each step can result in suspension failure. Complete
+                    each step shown in this procedure
+                </ion-card-content>
+            </ion-card>
+            <ul>
+                <li>Follow the haul truck safety precautions [Reference: Safety, page 45]</li>
+                <li>The rear suspension shall be checked, adjusted, and charged as a pair</li>
+                <li>Fully discharge the nitrogen from the rear suspensions</li>
+            </ul>
+        </app-expandable>
+
+        <app-expandable header="Required Tools and Materials" [expanded]="false">
+            <ion-list>
+                <ion-item *ngFor="let tool of tools; let i = index" [routerLink]="['/material-detail/', i]">
+                    <ion-label>{{ tool.name }}</ion-label>
+                </ion-item>
+            </ion-list>
+        </app-expandable>
+
+        <app-expandable header="Setup" [expanded]="false" (click)="scrollTo($event)">
+            <ion-slides class="justify-text">
+                <ion-slide>
+                    <div>
+                        <h1>Step 1</h1>
+                        <p>Lift and support th rear end of the chassis until the chrome length
+                            X_0 is reached on eacg rear suspension. Use the Suspension Assessment charts to
+                            find the X_0 dimension.</p>
+                        <ion-button routerLink="/detail-chart" routerDirection="forward" expand="block">Show
+                        </ion-button>
+                        <ion-card>
+                            <ion-card-header color="secondary">NOTICE</ion-card-header>
+                            <ion-card-content>
+                                The weight of the rear axle must remain on the ground
+                            </ion-card-content>
+                        </ion-card>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 2</h1>
+                        <p>
+                            Remove the suspension transducer cover from the rear suspensions.
+                        </p>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 3</h1>
+                        <p>
+                            Remove the rod protection cover from the rear suspension.
+                        </p>
+                        <ion-card>
+                            <ion-card-header color="warning">CAUTION</ion-card-header>
+                            <ion-card-content>
+                                <ul>
+                                    <li>Damage to the piston rod can occur when the protective
+                                        cover is removed
+                                    </li>
+                                    <li>Be careful not to damage the piston surface while working on the
+                                        suspension with the protective cover removed
+                                    </li>
+                                </ul>
+                            </ion-card-content>
+                        </ion-card>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <p>
+                            Using a hose from the chargin kit, connect one end to the suspension valve
+                            and the opposite end into a waste oil container. (Repeat this step for the
+                            opposite rear suspension).
+                        </p>
+                    </div>
+                </ion-slide>
+            </ion-slides>
+        </app-expandable>
+
+        <app-expandable header="Oil Level Check" [expanded]="false" (click)="scrollTo($event)">
+            <ion-slides class="justify-text">
+                <ion-slide>
+                    <div>
+                        <h1>Step 1</h1>
+                        <p>Open the gas valve and slowly lower the chassis until chrome length
+                            X_oil is reached on each rear suspension. Excess oil will flow through
+                            the hoses and into the waste oil container. Use the Suspension Assessment Charts
+                            to find the X_oil dimension</p>
+                        <ion-button routerLink="/detail-chart"
+                                    routerDirection="forward"
+                                    expand="block">Show
+                        </ion-button>
+
+                        <ion-card>
+                            <ion-card-header color="warning">CAUTION</ion-card-header>
+                            <ion-card-content>
+                                <ul>
+                                    <li>Trapped air will affect the oil volume and may result in
+                                    suspension failure</li>
+                                    <li>Make sure to release trapped air from inside the suspension</li>
+                                </ul>
+                            </ion-card-content>
+                        </ion-card>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 2</h1>
+                        <p>Make sure that oil flows from both suspensions. Keep the cassis in the
+                        position until flow of oil or oil foam slows down.</p>
+                        <ion-card>
+                            <ion-card-header color="secondary">NOTICE</ion-card-header>
+                            <ion-card-content>
+                                If oil does not flow from both the suspensions:
+                                <ul>
+                                    <li>The oil level is low and more oil must be added</li>
+                                </ul>
+                                <ion-button routerLink="/oil">See here how</ion-button>
+                            </ion-card-content>
+                        </ion-card>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 3</h1>
+                        <p>Close the gas valves</p>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 4</h1>
+                        <p>Slowly the chassis until the weight of the haul truck is fully supported
+                        by the suspensions and verify chrome length X ≥ X_oil - 5 mm (0.2 in).</p>
+                        <p>If X ≥ X_oil + 5 mm (0.2 in) on either suspension (when supporting the weight
+                        of the empty haul truck) procced to Suspension Oil Fill
+                        <ion-button expand="block" routerLink="/oil">See here how</ion-button></p>
+                        <p>If X ≤ X_oil + 5 mm (0.2 in) on both suspensions (when supporting the weight
+                            of the empty haul truck) procced to the next step</p>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 5</h1>
+                        <p>Lift the rear end of the chassis until the suspension is fully extended</p>
+                        <ion-card>
+                            <ion-card-header color="secondary">NOTICE</ion-card-header>
+                            <ion-card-content>
+                                The weight of the rear axle must remain on the ground
+                            </ion-card-content>
+                        </ion-card>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 6</h1>
+                        <p>Remove the ends of the hoses from the waste oil container and
+                        connect each of them to the nitrogen chargin kit manifold</p>
+                        <ion-card>
+                            <ion-card-header color="secondary">NOTICE</ion-card-header>
+                            <ion-card-content>
+                                <p>it is best to dedicate hoses for either fluid use r gas charging.
+                                    If the same hose must be used for both steps, ensure any residual oil
+                                    is drained from inside the hose before continuing.</p>
+                            </ion-card-content>
+                        </ion-card>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 7</h1>
+                        <p>Set the nitrogen charing kit regulator to approximately 5 bar (72 psi)
+                        and open the gas valves on both suspensions</p>
+                    </div>
+                </ion-slide>
+            </ion-slides>
+        </app-expandable>
+
+        <app-expandable header="Gas Charge Check" [expanded]="false" (click)="scrollTo($event)">
+            <p>The following is not a separate procedure, it is done in combination with the
+            suspension setup</p>
+            <ion-slides>
+                <ion-slide>
+                    <div>
+                        <h1>Step 1</h1>
+                        <p>Lift and support the rear end of the chassis until the chrome length X_0 is
+                        reached in each rear suspension.</p>
+                        <p>Wait until both suspensions are stable at chrome length X_0
+                        before proceeding to the next step</p>
+                        <ion-card>
+                            <ion-card-header color="secondary">NOTICE</ion-card-header>
+                            <ion-card-content>
+                                <p>The weight of the rear axle must remain on the ground</p>
+                            </ion-card-content>
+                        </ion-card>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 2</h1>
+                        <p>Adjust the gas charge to the specified precharge pressure P_0
+                        (reference the Suspension Assesment Chart for this pressure)</p>
+                        <ion-button expand="block" routerLink="/detail-chart">See here</ion-button>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 3</h1>
+                        <p>Verify the P_0 value stabilizes on both rear suspensions</p>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 4</h1>
+                        <p>Close the gas charging valves on both suspensions</p>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 5</h1>
+                        <p>Use the touch screen in the operator cab to verify the rear suspension
+                        pressures read within ± 1.5 bar (21 psi) of P_0.</p>
+                        <p>If the pressures are not within tolerance troubleshooting is required</p>
+                        <ion-card>
+                            <ion-card-header color="secondary">NOTICE</ion-card-header>
+                            <ion-card-content>
+                                <p>The pre-charge pressure and the pressure reading on the touch screen in
+                                the operator crab must be within ± 1.5 bar (21 psi)</p>
+                                <p>Incorrect pre-charge pressure can cause suspension failure</p>
+                            </ion-card-content>
+                        </ion-card>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 6</h1>
+                        <p>Disconnect both the hoses from the manifold of the nitrogen charging
+                        kit, and from each of the rear suspension gas valves. Replace the gas
+                        valve protective caps.</p>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 7</h1>
+                        <p>Reinstall the rod protection covers and the transducer covers.</p>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 8</h1>
+                        <p>Procedure complete. Lower the haul truck to the ground</p>
+                    </div>
+                </ion-slide>
+            </ion-slides>
+        </app-expandable>
+    </div>
+</ion-content>

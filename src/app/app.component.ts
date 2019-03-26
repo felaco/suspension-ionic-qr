@@ -1,8 +1,9 @@
 import {Component, QueryList, ViewChildren} from '@angular/core';
 
-import {IonRouterOutlet, Platform} from '@ionic/angular';
+import {IonRouterOutlet, NavController, Platform} from '@ionic/angular';
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 import {StatusBar} from '@ionic-native/status-bar/ngx';
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-root',
@@ -14,7 +15,9 @@ export class AppComponent {
     constructor(
         private platform: Platform,
         private splashScreen: SplashScreen,
-        private statusBar: StatusBar
+        private statusBar: StatusBar,
+        private navCtrl: NavController,
+        private router: Router
     ) {
         this.initializeApp();
     }
@@ -23,15 +26,21 @@ export class AppComponent {
         this.platform.ready().then(() => {
             this.statusBar.styleDefault();
             this.splashScreen.hide();
-        }).then(()=> this.manageBackButton());
+        }).then(() => this.manageBackButton());
     }
 
-    private manageBackButton(){
-        // this.routerOutlets.forEach(router => {
-        //     this.platform.backButton.subscribe(()=>{
-        //         if (router.canGoBack())
-        //             window.history.back();
-        //     })
-        // })
+    // https://forum.ionicframework.com/t/hardware-back-button-with-ionic-4/137905/56
+    private manageBackButton() {
+        this.routerOutlets.forEach(router => {
+            this.platform.backButton.subscribe(() => {
+                if (!router.canGoBack()){
+                    if (this.router.url === '/actions-page'){
+                        this.navCtrl.navigateBack('/home')
+                    } else {
+                        navigator['app'].exitApp();
+                    }
+                }
+            })
+        })
     }
 }
