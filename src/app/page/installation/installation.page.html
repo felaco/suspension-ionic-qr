@@ -3,7 +3,7 @@
       <ion-buttons slot="start">
           <ion-back-button defaultHref="/home"></ion-back-button>
       </ion-buttons>
-      <ion-title>removal</ion-title>
+      <ion-title>installation</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -15,150 +15,67 @@
           <p style="font-weight: bold">
               LME-SWP-00025 - pagina 1369
           </p>
-          <ul>
-              <li>Follow the haul truck safety precautions [Reference: Safety, page 45]</li>
-          </ul>
-          <ion-card>
-              <ion-card-header color="warning">CAUTION</ion-card-header>
-              <ion-card-content>
-                  The rear suspension handling tool is not validated for the removal of the rear
-                  suspension. During the rear suspension removal procedure, use a lifting device that
-                  can safely lift and support the rear suspension weight.
-              </ion-card-content>
-          </ion-card>
-          <ion-card>
-              <ion-card-header color="secondary">NOTICE</ion-card-header>
-              <ion-card-content>
-                  The minimum weight of each filled rear suspension is 895kg. Use an
-                  approved lift device that can safely lift and support the component weight
-              </ion-card-content>
-          </ion-card>
       </app-expandable>
 
       <app-expandable header="Materiales y herramientas requeridas" [expanded]="false">
-          <ion-list>
-              <ion-item>
-                  <ion-label>Pin Puller</ion-label>
-              </ion-item>
-              <ion-item>
-                  <ion-label>Lifting device and support for the haul truck chassis</ion-label>
-              </ion-item>
-              <ion-item>
-                  <ion-label>Lifting device forthe rear suspensions</ion-label>
-              </ion-item>
-              <ion-item>
-                  <ion-label>Applicable shipping pallet for the suspension being removed</ion-label>
-              </ion-item>
-              <ion-item>
-                  <ion-label>Band-strap</ion-label>
-              </ion-item>
-          </ion-list>
+            <ion-list>
+                    <ion-item *ngFor="let tool of tools; let i = index" [routerLink]="['/material-detail/', i]">
+                        <ion-label>{{ tool.name }}</ion-label>
+                    </ion-item>
+            </ion-list>
       </app-expandable>
       <ion-img src="/assets/img/instalacion_remosion suspension trasera.PNG"></ion-img>
       <ion-slides class="justify-text" [pager]="true">
           <ion-slide>
               <div>
                   <h1>Step 1</h1>
-                  <p>Lift and support the rear end of the chassis until the rear
-                      suspensions are fully extended</p>
-
-                  <ion-card>
-                      <ion-card-header color="secondary">NOTICE</ion-card-header>
-                      <ion-card-content>
-                          The weight of the rear axle must remain on the ground
-                      </ion-card-content>
-                  </ion-card>
+                  <p>Assemble and setup the rear suspension handling tool, and secure with strap to the forklit. [Reference : Rear Suspension Handling Tool Assembly , page 105]</p>
               </div>
           </ion-slide>
           <ion-slide>
               <div>
                   <h1>Step 2</h1>
-                  <p>Fully discharge the nitrogen from both rear suspensions</p>
+                  <p>Safely and carefully move the forklift with the rear suspension installed on the rear suspension handling tool into position and align the upper eye bearing with the frame clevis.</p>
+                  <ion-card>
+                    <ion-card-header color="secondary">NOTICE</ion-card-header>
+                    <ion-card-content>
+                        The minimum weigth of each pin is 66 kg (145 lb).
+                        -> Use an approved lift device that can safely lift and support the component weight.
+                    </ion-card-content>
+                </ion-card>
               </div>
           </ion-slide>
           <ion-slide>
               <div>
                   <h1>Step 3</h1>
-                  <p>Disconnect the grease lines (6) and electrical
-                      connections from the supsension
+                  <p>Apply a thin coat of anti-seize ti the suspension pin (2) and install on the upper eye.
                   </p>
               </div>
           </ion-slide>
           <ion-slide>
               <div>
                   <h1>Step 4</h1>
-                  <p>Remove the rod protection cover, if necessary</p>
-                  <ion-card>
-                      <ion-card-header color="warning">CAUTION</ion-card-header>
-                      <ion-card-content>
-                          <ul>
-                              <li>Damage to the piston rod can occur when the protective cover is removed</li>
-                              <li>Be careful not to damage the piston rod surface
-                                  when workin on the suspension with the protective cover removed
-                              </li>
-                          </ul>
-                      </ion-card-content>
-                  </ion-card>
+                  <p>Lubricate the cap screws (5) with anti-seize.</p>
               </div>
           </ion-slide>
           <ion-slide>
               <div>
                   <h1>Step 5</h1>
-                  <p>Safely and securely attach the suspension to the lifting device</p>
+                  <p>Install the retainer (3), washers (4), and cap screws (5).</p>
               </div>
           </ion-slide>
           <ion-slide>
               <div>
                   <h1>Step 6</h1>
-                  <p>Remove the cap screws (5), whashers (4) and retainer (3)</p>
-                  <ion-card>
-                      <ion-card-header color="secondary">NOTICE</ion-card-header>
-                      <ion-card-content>
-                          <p>The minimum weight of each pin is 66 kg.
-                              Use an approved lift device that can safely lift and support the component
-                              weight</p>
-                      </ion-card-content>
-                  </ion-card>
+                  <p>Tighten the cap screws (5) to 925 N*m (682 lbf ft).</p>
               </div>
           </ion-slide>
           <ion-slide>
               <div>
                   <h1>Step 7</h1>
-                  <p>Remove the two suspension pins (2) using the pin puller</p>
-              </div>
-          </ion-slide>
-          <ion-slide>
-              <div>
-                  <h1>Step 8</h1>
-                  <p>With the suspension safely secured to the lifting device,
-                      carefully lower the suspension from the haul truck</p>
-              </div>
-          </ion-slide>
-          <ion-slide>
-              <div>
-                  <h1>Step 9</h1>
-                  <p>Remove the rear suspension from the lifting device and move the
-                  suspension to a suitable shipping pallet.</p>
-                  <ion-card>
-                      <ion-card-header color="warning">Warning</ion-card-header>
-                      <ion-card-content>
-                          <p style="font-weight: bold">
-                              If the suspension is leaking oil, drain the oil by removing the
-                              plug from the oil fill port
-                          </p>
-                          <ul>
-                              <li>Fully collapse the supension and secure it for
-                              transport (i.e., using a band-strap through both eyes</li>
-                              <li>Make sure the oil port and the gas valve are closed before
-                              shipping</li>
-                          </ul>
-                      </ion-card-content>
-                  </ion-card>
+                  <p>Connect the grease lines (6) and electrical connections to the suspension (1).</p>
               </div>
           </ion-slide>
       </ion-slides>
-
-
   </div>
-
 </ion-content>
