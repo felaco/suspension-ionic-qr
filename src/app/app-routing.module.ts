@@ -15,7 +15,8 @@ const routes: Routes = [
     },
     {path: 'index-list', loadChildren: './page/index-list/index-list.module#IndexListPageModule'},
     {path: 'actions-page', loadChildren: './page/actions-page/actions-page.module#ActionsPagePageModule'},
-    {path: 'actions-page-redirect', redirectTo: 'actions-page'}
+    {path: 'actions-page-redirect', redirectTo: 'actions-page'},
+  { path: 'oil', loadChildren: './page/oil/oil.module#OilPageModule' }
 
 ];
 

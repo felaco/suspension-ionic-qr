@@ -1,0 +1,155 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Rear Suspension Oil Fill and Pressure Testing Procedure</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Rear Suspension Oil Fill and Pressure Testing Procedure</h1>
+  <div>
+    <ion-img src="/assets/img/removiendo los tornillos del acoplamiento de la valvula de purga.PNG"></ion-img>
+    <ion-img src="/assets/img/conexion del dispositivo de llenado de aceite.PNG"></ion-img>
+    <ion-img src="/assets/img/conexion con el dispositivo de carga de nitrogeno.PNG"></ion-img>
+    <ion-img src="/assets/img/valvulas de purga y apagado.PNG"></ion-img>
+
+    <app-expandable header="Suspension Oil Fill" [expanded]="false">
+      <ul>
+        <li>This procedure gives the instructions to pressure test and to fill the suspensions not installed on the haul
+          tuck.</li>
+      </ul>
+      <ion-card>
+        <ion-card-header color="warning">WARNING</ion-card-header>
+        <ion-card-content>
+          <p>Falling parts can cause injury</p>
+          <ul>
+            <li>Always use approved lift devices that can safely lift and support component weight.</li>
+          </ul>
+        </ion-card-content>
+      </ion-card>
+      <ion-slides class="justify-text" [pager]="true">
+        <ion-slide>
+          <div>
+            <h1>Step 1</h1>
+            <p>Use an approprieate lift device to position suspension vertically on a bench or fixture. Make sure the
+              suspension is secure from tipping and the bleedes valve (17) faces upward</p>
+            <ion-card>
+              <ion-card-header color="secondary">NOTICE</ion-card-header>
+              <ion-card-content>
+                <p>The fill capacity of each shock absorber is 46 L (12.2 gal).</p>
+                <ul>
+                  <li>Use only approved oil to fill this component.</li>
+                </ul>
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div>
+            <h1>Step 2</h1>
+            <p>Fill the suspension with 46 L (12.2 gal) of the approved oil for this application. [Refence : Oil and
+              Lubricant Specifications, page 117].</p>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div>
+            <h1>Step 3</h1>
+            <p>Connect the oil filling device to fitting (21).</p>
+            <ion-card>
+              <ion-card-header color="warning">CAUTION</ion-card-header>
+              <ion-card-content>
+                <ul>
+                  <li>Trapped air will affect the oil volume and may result in suspension failure.</li>
+                  <li>Make sure to release trapped air from inside the suspension.</li>
+                </ul>
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div>
+            <h1>Step 4</h1>
+            <p>Slowly open the bleeder valve (17) to permit trapped air to escape.</p>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div>
+            <h1>Step 5</h1>
+            <p>Begin to fill the suspension through fitting (21) with 46 L (12.2 gal) of the approved oil for this
+              application. [Reference : Oil and Lubricant Specifications, page 117].</p>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div>
+            <h1>Step 6</h1>
+            <p>Remove the oil filling device from fitting (21) and reinstall the oil fill port cap.</p>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </app-expandable>
+
+    <app-expandable header="Suspension Pressure Testing" [expanded]="false">
+        <ion-card>
+          <ion-card-header color="warning">WARNING</ion-card-header>
+          <ion-card-content>
+            <p>Incorrect handling of gas substances can cause injury.</p>
+            <ul>
+              <li>Carefully follow all site gas operating safety procedures, and make sure to put on approved protective clothing and safety goggles when you work with gas substances.</li>
+            </ul>
+          </ion-card-content>
+        </ion-card>
+        <ion-slides class="justify-text" [pager]="true">
+          <ion-slide>
+            <div>
+              <h1>Step 1</h1>
+              <p>Check to make sure isolator valce (15) is correctly installed.</p>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div>
+              <h1>Step 2</h1>
+              <p>Attach the nitrogen charging device to the bleeder valve (17).</p>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div>
+              <h1>Step 3</h1>
+              <p>Througt the bleeder valve (17), charge the suspension with 40 bar (580 psi).</p>
+              <ion-card>
+                <ion-card-header color="warning">CAUTION</ion-card-header>
+                <ion-card-content>
+                  <p>The suspension will extend during charging.</p>
+                  <ul>
+                    <li>Keep clear of the suspension during charging.</li>
+                  </ul>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div>
+              <h1>Step 4</h1>
+              <p>Read the charge pressure from the nitrogen gauge until the suspension has fully extended to 1170 mm (46.06 in).</p>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div>
+              <h1>Step 5</h1>
+              <p>Close the bleeder valve (17) and let the suspension rest under pressure for 24 hours.</p>
+              <ion-card>
+                  <ion-card-header color="secondary">NOTE</ion-card-header>
+                  <ion-card-content>
+                    <p>After the 24 - hour time period has lapses, the pressure loss cannot exceed 1.5 bar (21 psi).</p>
+                    <ul>
+                      <li>Use an approved lift device that can safely lift and support these weights.</li>
+                    </ul>
+                  </ion-card-content>
+                </ion-card>
+            </div>
+          </ion-slide>
+        </ion-slides>
+      </app-expandable>
+  </div>
+</ion-content>
