@@ -1,0 +1,14 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons>
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>detail-chart</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div>
+        <ion-img *ngFor="let img of imgs" [src]="img"></ion-img>
+    </div>
+</ion-content>
