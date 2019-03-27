@@ -20,20 +20,20 @@ export class ExpandableComponent implements OnInit {
     ngOnInit(): void {
         // aparentemente viewchild no se ejecuta aun en este punto.
         // asi que lo tiro a un timeout como hack
-        setTimeout(() =>{
-            if (this.expanded){
+        setTimeout(() => {
+            if (this.expanded) {
                 this.content.nativeElement.style.maxHeight = this.content.nativeElement.scrollHeight + 'px';
             } else {
                 this.content.nativeElement.style.maxHeight = '0';
             }
-        }, 50);
+        }, 100);
     }
 
 
-    private onExpand(){
+    private onExpand() {
 
         this.expanded = !this.expanded;
-        if (this.expanded){
+        if (this.expanded) {
             this.content.nativeElement.style.maxHeight = this.content.nativeElement.scrollHeight + 'px';
         } else {
             this.content.nativeElement.style.maxHeight = '0';

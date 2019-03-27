@@ -1,0 +1,92 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Service Tools Operations</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <h1>Rear Suspension Handling Tool Assembly</h1>
+    <div class="justify-text">
+        <ion-img src="/assets/img/tool_assembly.PNG"></ion-img>
+        <ion-card>
+            <ion-card-header color="secondary">TIP</ion-card-header>
+            <ion-card-content>
+                <div>
+                    <p>The rear suspension handling tool is designed to help with the installation
+                    of the rear suspension.</p>
+                    <p>A fork lift must be used to lift andmove the suspension handling
+                    tool to position and align the upper eye bearing with the frame clevis.</p>
+                </div>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-header color="warning">CAUTION</ion-card-header>
+            <ion-card-content>
+                <div>
+                    <p>The rear suspension handling tool is not validated to be used for the removal
+                    of the rear suspension</p>
+                    <p>Use the recommended tools shown for the rear uspension removal.</p>
+                </div>
+            </ion-card-content>
+        </ion-card>
+        <app-expandable [expanded]="false" header="Accessories">
+            <img src="/assets/img/tool_lever_arm.PNG">
+            <small>Suspension Handling Tool Lever Arm</small>
+            <img src="/assets/img/tool_security_strap.PNG">
+            <small>Suspension Handling Tool Security Strap</small>
+        </app-expandable>
+
+        <app-expandable header="Setup" [expanded]="false" (click)="scrollTo($event)">
+            <ion-img src="/assets/img/tool_assembled.PNG"></ion-img>
+            <small>Fully assembled rear Suspension Handling Tool with Rear Suspension</small>
+            <ion-list>
+                <ion-item *ngFor="let tool of tool_parts; let i = index">
+                    <ion-label>{{i + 1}}. {{ tool }}</ion-label>
+                </ion-item>
+            </ion-list>
+            <ion-slides>
+                <ion-slide>
+                    <div>
+                        <h1>Step 1</h1>
+                        <p>As a safety measure, use a chain link (5) to attach the rear suspension
+                        handling tool (3) to the forklift mast</p>
+                        <!-- ion-img se carga perezosamente, por lo que si se desea cargar el app expandable
+                        como expanded = true usar el tag img mejor -->
+                        <img src="/assets/img/tool_step1.PNG">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 2</h1>
+                        <p>Using the forklift, lift the rear suspension handling tool (3) above the
+                        ground and tilt the forks to prevent the tool from sliding from the forks.</p>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 3</h1>
+                        <p>Safely assemble the rear suspension (1) to the handling tool (3), and
+                        use the security strap (4) to secure the rear suspension (1).</p>
+                        <img src="/assets/img/tool_step3.PNG">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 4</h1>
+                        <p>Rotate the upper eye so the transducer cover is oriented toward the rear of
+                        the haul truck.</p>
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div>
+                        <h1>Step 5</h1>
+                        <p>Use the lever arm (2) to orient the upper eye perpendicular to the lower eye</p>
+                    </div>
+                </ion-slide>
+            </ion-slides>
+        </app-expandable>
+    </div>
+</ion-content>

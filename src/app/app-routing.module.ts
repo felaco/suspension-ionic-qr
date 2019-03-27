@@ -17,6 +17,7 @@ const routes: Routes = [
     {path: 'installation', loadChildren: './page/installation/installation.module#InstallationPageModule'},
     {path: 'setup', loadChildren: './page/setup/setup.module#SetupPageModule'},
     {path: 'detail-chart', loadChildren: './page/detail-chart/detail-chart.module#DetailChartPageModule'},
+  { path: 'suspension-handling-tool', loadChildren: './page/suspension-handling-tool/suspension-handling-tool.module#SuspensionHandlingToolPageModule' },
 
 ];
 

@@ -32,7 +32,7 @@ export class SetupPage implements OnInit {
         try {
             this.content.scrollToPoint(0, mouseEvent.srcElement.offsetTop, 500);
         } catch (e) {
-
+            // modern problems require modern solutions
         }
     }
 
