@@ -1,12 +1,24 @@
 <ion-header>
     <ion-toolbar>
         <ion-title>
-            Service Manual
+            
         </ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-    <ion-button routerLink="/qr-dialog" routerDirection="forward" expand="block">Escanear</ion-button>
-    <ion-button routerLink="/index-list" routerDirection="forward" expand="block">Ver listado</ion-button>
+
+
+<ion-content padding fullscreen>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 635 635">
+        <defs>
+            <style>.cls-1{font-size:130px;font-family:Impact;}.cls-1,.cls-3{fill:#fff;}.cls-2{letter-spacing:0.02em;}</style>
+        </defs>
+        <g id="Capa_2" data-name="Capa 2" class="ion-justify-content-center">
+            <text class="cls-1" transform="translate(114.63 272.76)">Se<tspan class="cls-2" x="133.68" y="0">r</tspan><tspan x="182.56" y="0">vice </tspan><tspan x="5.01" y="156">Manual</tspan></text>
+            <path class="cls-3" d="M317.5,635A317.51,317.51,0,0,1,93,93,317.51,317.51,0,0,1,542,542,315.46,315.46,0,0,1,317.5,635Zm0-595C164.49,40,40,164.49,40,317.5S164.49,595,317.5,595,595,470.51,595,317.5,470.51,40,317.5,40Z"/>
+        </g>
+    </svg>    
+    <div class="layer"></div><!--layer-->
+        <ion-button routerLink="/qr-dialog" routerDirection="forward" expand="block" class="ion-margin-bottom ion-margin-top">Escanear</ion-button>
+        <ion-button routerLink="/index-list" routerDirection="forward" expand="block">Ver listado</ion-button>    
 </ion-content>

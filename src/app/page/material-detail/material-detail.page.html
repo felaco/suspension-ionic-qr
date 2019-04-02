@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar color="primary">
+    <ion-toolbar>
         <ion-buttons slot="start">
             <ion-back-button defaultHref=""></ion-back-button>
         </ion-buttons>
@@ -9,19 +9,19 @@
 
 <ion-content>
     <ion-card>
-        <ion-card-header color="secondary">Name</ion-card-header>
+        <ion-card-header>Name</ion-card-header>
         <ion-card-content>
             {{ detail.name }}
         </ion-card-content>
     </ion-card>
     <ion-card *ngIf="detail.notes">
-        <ion-card-header color="secondary">Notes</ion-card-header>
+        <ion-card-header>Notes</ion-card-header>
         <ion-card-content>
             {{ detail.notes }}
         </ion-card-content>
     </ion-card>
     <ion-card>
-        <ion-card-header color="secondary">Reference</ion-card-header>
+        <ion-card-header>Reference</ion-card-header>
         <ion-card-content>
             {{ detail.reference }}
         </ion-card-content>

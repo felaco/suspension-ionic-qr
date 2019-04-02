@@ -117,3 +117,36 @@ app-qr-dialog {
   overflow: hidden;
   transition: height .35s ease
 }
+
+/*** CEMQ ***/
+
+ion-content{--background:#071121}
+
+.button-solid{--background:#06b191}
+
+.list{background:transparent}
+.list ion-item{--background:transparent}
+.item .sc-ion-label-ios-h{--color:#c7c7c7}
+.item.sc-ion-label-md-h, .item .sc-ion-label-md-h{--color:#c7c7c7}
+
+ion-toolbar{--background:steelblue; color:white}
+.toolbar-container{--background:steelblue; color:white}
+
+.sc-ion-back-button-ios-h{color:#071121}
+
+.in-list .item{border-bottom:none}
+
+h1, h6{color:white}
+p{color:steelblue}
+li{color:steelblue}
+
+.card-content{font-size:12px}
+
+ion-slide p{font-size:14px}
+ion-card{--background:rgba(70,130,180,.1)!important}
+ion-card-content{text-align:justify; color:steelblue}
+ion-card-header{font-weight:bold; color:white}
+ion-item{--padding-end:16px; --border-color:steelblue; --detail-icon-color:steelblue; --detail-icon-opacity:1}
+ion-item a.item-inner{border-bottom:1px solid steelblue!important}
+
+ion-button{text-transform:capitalize}

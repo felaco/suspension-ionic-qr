@@ -1,1 +1,41 @@
+/*
+ion-content{
+    --background:url('../../assets/images/engine.jpg') no-repeat;
+}
+*/
+/*
+ion-content {
+    --background: none;
+    background-image: url('/assets/imgs/engine.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*/
 
+ion-content {
+    --background: url('../../assets/img/engine.jpg') no-repeat center center / cover;
+}
+
+.layer{
+    background-color: rgba(7, 17, 33, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:0
+}
+
+ion-toolbar{
+    --background:transparent;
+    --ion-color-base:transparent !important
+}
+
+h1{color:white; z-index:1; position:sticky}
+
+ion-toolbar{--border-width: 0 0 0 0 !important}
+
+.header-md:after{background-image:none}
+
+svg{height:180px; margin:auto; display:block; position:relative; z-index:1}
