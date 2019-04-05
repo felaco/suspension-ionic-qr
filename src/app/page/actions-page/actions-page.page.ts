@@ -7,7 +7,7 @@ import {Router} from "@angular/router";
     styleUrls: ['./actions-page.page.scss'],
 })
 export class ActionsPagePage implements OnInit {
-    private title = 'Rear Suspension';
+    public title = 'Rear Suspension';
 
     constructor(private router:Router) {
     }

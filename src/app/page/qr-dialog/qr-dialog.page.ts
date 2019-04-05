@@ -11,7 +11,7 @@ import { QrResultService } from "../../providers/qr-result.service";
 export class QrDialogPage implements OnInit {
     private scanning = false;
     private content: HTMLElement;
-    private displayGuideLine = true;
+    public displayGuideLine = true;
 
     constructor(private qrScanner: QRScanner,
         private navCtrl: NavController,

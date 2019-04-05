@@ -7,7 +7,7 @@ import {MaterialsToolsRequiredService, ToolsMaterials} from "../../providers/mat
     styleUrls: ['./removal.page.scss'],
 })
 export class RemovalPage implements OnInit {
-    private tools:ToolsMaterials[];
+    public tools:ToolsMaterials[];
 
     constructor(private materialProvider: MaterialsToolsRequiredService) {
         this.tools = [

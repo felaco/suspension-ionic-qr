@@ -8,7 +8,7 @@ import {IonContent} from "@ionic/angular";
     styleUrls: ['./setup.page.scss'],
 })
 export class SetupPage implements OnInit {
-    private tools: ToolsMaterials[];
+    public tools: ToolsMaterials[];
     @ViewChild(IonContent) content : IonContent;
 
     constructor(private materialProvider: MaterialsToolsRequiredService) {
@@ -28,7 +28,7 @@ export class SetupPage implements OnInit {
     ngOnInit() {
     }
 
-    private scrollTo(mouseEvent){
+    public scrollTo(mouseEvent){
         try {
             this.content.scrollToPoint(0, mouseEvent.srcElement.offsetTop, 500);
         } catch (e) {

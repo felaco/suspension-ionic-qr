@@ -30,7 +30,7 @@ export class ExpandableComponent implements OnInit {
     }
 
 
-    private onExpand() {
+    public onExpand() {
 
         this.expanded = !this.expanded;
         if (this.expanded) {

@@ -8,7 +8,7 @@ import {MaterialsToolsRequiredService, ToolsMaterials} from "../../providers/mat
     styleUrls: ['./material-detail.page.scss'],
 })
 export class MaterialDetailPage implements OnInit {
-    private detail: ToolsMaterials;
+    public detail: ToolsMaterials;
 
     constructor(activatedRoute: ActivatedRoute,
                 materialProvider: MaterialsToolsRequiredService

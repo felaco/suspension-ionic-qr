@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./detail-chart.page.scss'],
 })
 export class DetailChartPage implements OnInit {
-    private imgs = [];
+    public imgs = [];
 
     constructor() {
         this.imgs = [

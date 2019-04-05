@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 
 export class HomePage {
 
-    constructor(private platform: Platform) {
+    constructor(public platform: Platform) {
 
     }
 }

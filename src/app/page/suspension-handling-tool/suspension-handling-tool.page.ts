@@ -7,7 +7,7 @@ import {IonContent} from "@ionic/angular";
     styleUrls: ['./suspension-handling-tool.page.scss'],
 })
 export class SuspensionHandlingToolPage implements OnInit {
-    private tool_parts;
+    public tool_parts;
     @ViewChild(IonContent) content: IonContent;
     private expanded = false;
 
@@ -24,7 +24,7 @@ export class SuspensionHandlingToolPage implements OnInit {
     ngOnInit() {
     }
 
-    private scrollTo(mouseEvent){
+    public scrollTo(mouseEvent){
         this.expanded = !this.expanded;
 
         if (this.expanded)
