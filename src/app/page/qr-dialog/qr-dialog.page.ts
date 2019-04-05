@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {QRScanner, QRScannerStatus} from "@ionic-native/qr-scanner/ngx";
-import {NavController} from "@ionic/angular";
-import {QrResultService} from "../../providers/qr-result.service";
+import { Component, OnInit } from '@angular/core';
+import { QRScanner, QRScannerStatus } from "@ionic-native/qr-scanner/ngx";
+import { NavController } from "@ionic/angular";
+import { QrResultService } from "../../providers/qr-result.service";
 
 @Component({
     selector: 'app-qr-dialog',
@@ -11,17 +11,18 @@ import {QrResultService} from "../../providers/qr-result.service";
 export class QrDialogPage implements OnInit {
     private scanning = false;
     private content: HTMLElement;
+    private displayGuideLine = true;
 
     constructor(private qrScanner: QRScanner,
-                private navCtrl: NavController,
-                private qrResultProvider: QrResultService
+        private navCtrl: NavController,
+        private qrResultProvider: QrResultService
     ) {
     }
 
     ngOnInit() {
-        this.qrScanner.prepare().then((status: QRScannerStatus)=>{
-            if (status.authorized){
-                const scanSub = this.qrScanner.scan().subscribe((text:string)=>{
+        this.qrScanner.prepare().then((status: QRScannerStatus) => {
+            if (status.authorized) {
+                const scanSub = this.qrScanner.scan().subscribe((text: string) => {
                     console.log('Scanner: ' + text);
                     this.qrResultProvider.qrResult = text;
                     this.content.style.display = 'block';
@@ -40,13 +41,17 @@ export class QrDialogPage implements OnInit {
         })
     }
 
-    ngOnDestroy (){
+    ngOnDestroy() {
         this.qrScanner.getStatus().then(status => {
-            if(status.prepared){
+            if (status.prepared) {
                 this.qrScanner.hide();
                 this.qrScanner.destroy();
                 console.log('destroyed scanner');
             }
         })
+    }
+
+    public hiddeGuideLine() {
+        this.displayGuideLine = false;
     }
 }

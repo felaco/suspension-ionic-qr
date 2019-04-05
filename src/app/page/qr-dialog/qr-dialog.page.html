@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar color="primary">
         <ion-buttons slot="start">
-            <ion-back-button></ion-back-button>
+            <ion-back-button text="" (click)="hiddeGuideLine()" defaultHref="/"></ion-back-button>
         </ion-buttons>
         <ion-title>qr-dialog</ion-title>
     </ion-toolbar>
@@ -12,7 +12,7 @@
 </ion-content>
 
 <div class="page-scan">
-    <div class="guides">
+    <div class="guides" *ngIf="displayGuideLine">
         <img src="/assets/img/bitpay-wallet-qr-scan-guides.svg" alt="" class="svg qr-scan-guides">
     </div>
 </div>
